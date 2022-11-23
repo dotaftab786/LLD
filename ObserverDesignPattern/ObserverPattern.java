@@ -35,9 +35,9 @@ class IphoneObservable implements StockObservable{
     @Override
     public void setStock(int newCount) {
         if(count == 0){
+            count+=newCount;
             notifyObserver();
         }
-        count+=newCount;
     }
 
     @Override
@@ -63,6 +63,7 @@ class EmailAlertObserver implements NotificationAlertObserver {
     public void update() {
         // here we can write business logic like send email
         sendMail(email,"message send on mail");
+        System.out.println("Total available stock count are "+observable.getStockCount());
     }
     
     private void sendMail(String email, String msg){
