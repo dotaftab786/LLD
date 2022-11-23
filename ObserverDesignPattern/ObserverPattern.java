@@ -19,7 +19,7 @@ class IphoneObservable implements StockObservable{
     public void add(NotificationAlertObserver obj) {
         objList.add(obj);
     }
-
+    
     @Override
     public void remove(NotificationAlertObserver obj) {
         objList.remove(obj);
